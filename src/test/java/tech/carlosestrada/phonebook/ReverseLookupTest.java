@@ -1,7 +1,8 @@
-package com.zipcodewilmington.phonebook;
+package tech.carlosestrada.phonebook;
 
 import org.junit.Assert;
 import org.junit.Test;
+import tech.carlosestrada.phonebook.PhoneBook;
 
 public class ReverseLookupTest {
     @Test
@@ -11,7 +12,7 @@ public class ReverseLookupTest {
         String expectedName = "John";
         String phoneNumber = "302-555-4545";
         phoneBook.add(expectedName, phoneNumber);
-        Assert.assertTrue(phoneBook.hasEntry(phoneNumber));
+        Assert.assertTrue(phoneBook.hasEntry(expectedName));
 
         // when
         String actualName = phoneBook.reverseLookup(phoneNumber);
@@ -27,7 +28,7 @@ public class ReverseLookupTest {
         String expectedName = "Joe";
         String phoneNumber = "302-554-4545";
         phoneBook.add(expectedName, phoneNumber);
-        Assert.assertTrue(phoneBook.hasEntry(phoneNumber));
+        Assert.assertTrue(phoneBook.hasEntry(expectedName));
 
         // when
         String actualName = phoneBook.reverseLookup(phoneNumber);
@@ -44,7 +45,7 @@ public class ReverseLookupTest {
         String expectedName = "Smith";
         String phoneNumber = "302-554-4535";
         phoneBook.add(expectedName, phoneNumber);
-        Assert.assertTrue(phoneBook.hasEntry(phoneNumber));
+        Assert.assertTrue(phoneBook.hasEntry(expectedName));
 
         // when
         String actualName = phoneBook.reverseLookup(phoneNumber);

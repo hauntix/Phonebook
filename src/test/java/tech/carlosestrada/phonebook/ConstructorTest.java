@@ -1,7 +1,8 @@
-package com.zipcodewilmington.phonebook;
+package tech.carlosestrada.phonebook;
 
 import org.junit.Assert;
 import org.junit.Test;
+import tech.carlosestrada.phonebook.PhoneBook;
 
 import java.util.HashMap;
 import java.util.List;
